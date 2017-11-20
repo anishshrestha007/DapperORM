@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECF9C811-7F32-4F3F-B9EA-499B794E365F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bango</RootNamespace>
+    <AssemblyName>Bango</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bango.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bango.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\Dapper\bin\Debug\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Rainbow">
+      <HintPath>..\Dapper.Rainbow\bin\Debug\Dapper.Rainbow.dll</HintPath>
+    </Reference>
+    <Reference Include="Dynamitey">
+      <HintPath>..\..\..\ERP\ERP\ERP-Masters\ERP.Masters.Account.Api\bin\Debug\Dynamitey.dll</HintPath>
+    </Reference>
+    <Reference Include="LightInject, Version=5.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.5.0.3\lib\net45\LightInject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\ERP\ERP\ERP-Masters\ERP.Masters.Account.Api\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.0.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.0.5\lib\net45\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebApi.OutputCache.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Strathweb.CacheOutput.WebApi2.0.10.0\lib\net45\WebApi.OutputCache.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebApi.OutputCache.V2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Strathweb.CacheOutput.WebApi2.0.10.0\lib\net45\WebApi.OutputCache.V2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiRequestHandler.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\DbCommandBase.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Controllers\AllowCrossSiteJsonAttribute.cs" />
+    <Compile Include="Controllers\CrudController.cs" />
+    <Compile Include="Controllers\HierarchyController.cs" />
+    <Compile Include="Controllers\PrivateController.cs" />
+    <Compile Include="Date\CSVParser.cs" />
+    <Compile Include="Date\DateConverter.cs" />
+    <Compile Include="Date\Nepalidate.cs" />
+    <Compile Include="DbConnect.cs" />
+    <Compile Include="Execption.cs" />
+    <Compile Include="FileBox.cs" />
+    <Compile Include="FiscalYear\FiscalYear.cs" />
+    <Compile Include="HeaderData.cs" />
+    <Compile Include="Helpers\BatchDataUpdate.cs" />
+    <Compile Include="Helpers\ChangeHistoryHelper.cs" />
+    <Compile Include="Helpers\CrudHelperBase.cs" />
+    <Compile Include="Helpers\DbHelper.cs" />
+    <Compile Include="Helpers\DbServiceUtility.cs" />
+    <Compile Include="Helpers\IChangeHistoryHelper.cs" />
+    <Compile Include="Helpers\ICrudHelper.cs" />
+    <Compile Include="Helpers\IDbHelper.cs" />
+    <Compile Include="Helpers\IRegisterType.cs" />
+    <Compile Include="Helpers\LangLoader.cs" />
+    <Compile Include="Helpers\RegisterTypeBase.cs" />
+    <Compile Include="JsonConfig.cs" />
+    <Compile Include="Models\Attributes\ComboFieldsAttribute.cs" />
+    <Compile Include="Models\Attributes\CurrentTimestampAttribute.cs" />
+    <Compile Include="Models\Attributes\DateType.cs" />
+    <Compile Include="Models\Attributes\DBInteractIgnoreAttribute.cs" />
+    <Compile Include="Models\Attributes\DeleteFlagAttribute.cs" />
+    <Compile Include="Models\Attributes\EmailAttribute.cs" />
+    <Compile Include="Models\Attributes\KeyAttribute.cs" />
+    <Compile Include="Models\Attributes\MaxLengthAttribute.cs" />
+    <Compile Include="Models\Attributes\PhoneAttribute.cs" />
+    <Compile Include="Models\Attributes\RangeAttribute.cs" />
+    <Compile Include="Models\Attributes\RequiredAttribute.cs" />
+    <Compile Include="Models\Attributes\TableDetailAttribute.cs" />
+    <Compile Include="Models\Attributes\TimeOnlyAttribute.cs" />
+    <Compile Include="Models\Attributes\TimestampAttribute.cs" />
+    <Compile Include="Models\Attributes\ValidateModelAttribute.cs" />
+    <Compile Include="Models\ChangeHistory.cs" />
+    <Compile Include="Models\ChildReference.cs" />
+    <Compile Include="Models\ChildReferenceList.cs" />
+    <Compile Include="Models\IChildReference.cs" />
+    <Compile Include="Models\IChildReferenceList.cs" />
+    <Compile Include="Models\IModel.cs" />
+    <Compile Include="Models\LogChangeHistory.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\ModelService.cs" />
+    <Compile Include="Models\TreeNode.cs" />
+    <Compile Include="Models\UniqueConstraint.cs" />
+    <Compile Include="BangoCommand.cs" />
+    <Compile Include="MyroEnums.cs" />
+    <Compile Include="MyroErrors.cs" />
+    <Compile Include="MyroHttpControllerSelector.cs" />
+    <Compile Include="OldDbConnect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rbac\AuthBaseController.cs" />
+    <Compile Include="Rbac\AuthModel.cs" />
+    <Compile Include="Rbac\AuthorizationHelper.cs" />
+    <Compile Include="Rbac\AuthorizeOnlyAttribute.cs" />
+    <Compile Include="Rbac\AuthService.cs" />
+    <Compile Include="Rbac\IAuthService.cs" />
+    <Compile Include="Rbac\IResponseAuth.cs" />
+    <Compile Include="Rbac\IRightsService.cs" />
+    <Compile Include="Rbac\IUserModel.cs" />
+    <Compile Include="Rbac\IUserService.cs" />
+    <Compile Include="Rbac\ReponseAuth.cs" />
+    <Compile Include="Rbac\RightsAuthorizeAttribute.cs" />
+    <Compile Include="Rbac\RightsPrefixAttribute.cs" />
+    <Compile Include="Rbac\SampleAuthorizeAttribute.cs" />
+    <Compile Include="Rbac\SessionLogModel.cs" />
+    <Compile Include="Rbac\SessionLogService.cs" />
+    <Compile Include="Rbac\UserModel.cs" />
+    <Compile Include="Rbac\UserService.cs" />
+    <Compile Include="RegisterTypes.cs" />
+    <Compile Include="Report\IReportBase.cs" />
+    <Compile Include="Repo\ChangeHistoryRepo.cs" />
+    <Compile Include="Repo\CrudRepo.cs" />
+    <Compile Include="Repo\HierarchyRepo.cs" />
+    <Compile Include="Repo\ICrudRepo.cs" />
+    <Compile Include="Repo\IHierarchyRepo.cs" />
+    <Compile Include="Repo\ISearchRepo.cs" />
+    <Compile Include="Repo\RepoExceptions.cs" />
+    <Compile Include="Repo\RepoUtility.cs" />
+    <Compile Include="Repo\SearchRepo.cs" />
+    <Compile Include="Responses\IResponseBase.cs" />
+    <Compile Include="Responses\IResponseCollection.cs" />
+    <Compile Include="Responses\IResponseModel.cs" />
+    <Compile Include="Responses\IResponseReport.cs" />
+    <Compile Include="Responses\IResponseTree.cs" />
+    <Compile Include="Responses\ReponseModel.cs" />
+    <Compile Include="Responses\ReponseReport.cs" />
+    <Compile Include="Responses\ResponseBase.cs" />
+    <Compile Include="Responses\ResponseCollection.cs" />
+    <Compile Include="Responses\ResponseTree.cs" />
+    <Compile Include="Services\ChangeHistoryService.cs" />
+    <Compile Include="Services\CrudService.cs" />
+    <Compile Include="Services\DbService.cs" />
+    <Compile Include="Services\HierarchyService.cs" />
+    <Compile Include="Services\ICrudService.cs" />
+    <Compile Include="Services\ICrudServiceOld.cs" />
+    <Compile Include="Services\IDbService.cs" />
+    <Compile Include="Services\IHierarchyService.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\JsReportParam.cs" />
+    <Compile Include="Services\ServiceUtility.cs" />
+    <Compile Include="SessionData.cs" />
+    <Compile Include="Setting\JsonSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filters\" />
+    <Folder Include="Service References\" />
+    <Folder Include="Sql\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
